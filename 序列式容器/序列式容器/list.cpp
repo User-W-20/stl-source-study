@@ -14,46 +14,46 @@
 
 //只要刻意在环状链表的尾端加上一个空白节点，便符合STL规范的“前闭后开”区间。
 
-#include<iostream>
-#include<list>
-#include<algorithm>
-using namespace std;
-
-int main() {
-	int i=0;
-	list<int> ilist;
-	cout << "size=" << ilist.size() << endl;//size=0
-
-	ilist.push_back(0);
-	ilist.push_back(1);
-	ilist.push_back(2);
-	ilist.push_back(3);
-	ilist.push_back(4);
-	cout << "size=" << ilist.size() << endl;//size=5
-
-	list<int>::iterator ite;
-	for (ite = ilist.begin(); ite != ilist.end(); ++ite)
-		cout << *ite << " ";//0 1 2 3 4 
-	cout << endl;
-
-	ite = find(ilist.begin(), ilist.end(), 3);
-	if (ite != ilist.end())
-		ilist.insert(ite, 99);
-	cout << "size=" << ilist.size() << endl;//size=6
-	cout << *ite << endl;//3
-
-	for (ite = ilist.begin(); ite != ilist.end(); ++ite)
-		cout << *ite << " ";//0 1 2  99 3 4 
-	cout << endl;
-
-	ite= find(ilist.begin(), ilist.end(), 1);
-	if (ite != ilist.end())
-		cout << *(ilist.erase(ite)) << endl;//2
-
-	for (ite = ilist.begin(); ite != ilist.end(); ++ite)
-		cout << *ite << " ";//0  2  99 3 4 
-	cout << endl;
-}
+//#include<iostream>
+//#include<list>
+//#include<algorithm>
+//using namespace std;
+//
+//int main() {
+//	int i=0;
+//	list<int> ilist;
+//	cout << "size=" << ilist.size() << endl;//size=0
+//
+//	ilist.push_back(0);
+//	ilist.push_back(1);
+//	ilist.push_back(2);
+//	ilist.push_back(3);
+//	ilist.push_back(4);
+//	cout << "size=" << ilist.size() << endl;//size=5
+//
+//	list<int>::iterator ite;
+//	for (ite = ilist.begin(); ite != ilist.end(); ++ite)
+//		cout << *ite << " ";//0 1 2 3 4 
+//	cout << endl;
+//
+//	ite = find(ilist.begin(), ilist.end(), 3);
+//	if (ite != ilist.end())
+//		ilist.insert(ite, 99);
+//	cout << "size=" << ilist.size() << endl;//size=6
+//	cout << *ite << endl;//3
+//
+//	for (ite = ilist.begin(); ite != ilist.end(); ++ite)
+//		cout << *ite << " ";//0 1 2  99 3 4 
+//	cout << endl;
+//
+//	ite= find(ilist.begin(), ilist.end(), 1);
+//	if (ite != ilist.end())
+//		cout << *(ilist.erase(ite)) << endl;//2
+//
+//	for (ite = ilist.begin(); ite != ilist.end(); ++ite)
+//		cout << *ite << " ";//0  2  99 3 4 
+//	cout << endl;
+//}
 
 //list默认使用alloc作为空间配置器，另外定义了一个list_node_allocator，目前是更方便的以节点大小为配置单位
 
