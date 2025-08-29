@@ -125,6 +125,7 @@
   <ItemGroup>
     <ClCompile Include="deque.cpp" />
     <ClCompile Include="list.cpp" />
+    <ClCompile Include="stack.cpp" />
     <ClCompile Include="vector.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
