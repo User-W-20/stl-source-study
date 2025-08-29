@@ -11,24 +11,24 @@
 //list也是双向开口的数据结构
 //若以list为底部结构并封闭其头端开口，一样能够轻易形成一个stack
 
-#include<iostream>
-#include<stack>
-#include<list>
-#include<algorithm>
-using namespace std;
-
-int main() {
-	stack<int, list<int>>istack;
-	istack.push(1);
-	istack.push(3);
-	istack.push(5);
-	istack.push(7);
-
-	cout << istack.size() << endl;//4
-	cout << istack.top() << endl;//7
-
-	istack.pop();cout<< istack.top() << endl;//5
-	istack.pop();cout<< istack.top() << endl;//3
-	istack.pop();cout<< istack.top() << endl;//1
-	cout<< istack.size() << endl;//1
-}
+//#include<iostream>
+//#include<stack>
+//#include<list>
+//#include<algorithm>
+//using namespace std;
+//
+//int main() {
+//	stack<int, list<int>>istack;
+//	istack.push(1);
+//	istack.push(3);
+//	istack.push(5);
+//	istack.push(7);
+//
+//	cout << istack.size() << endl;//4
+//	cout << istack.top() << endl;//7
+//
+//	istack.pop();cout<< istack.top() << endl;//5
+//	istack.pop();cout<< istack.top() << endl;//3
+//	istack.pop();cout<< istack.top() << endl;//1
+//	cout<< istack.size() << endl;//1
+//}
