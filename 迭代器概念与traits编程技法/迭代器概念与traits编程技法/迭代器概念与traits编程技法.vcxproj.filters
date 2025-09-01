@@ -18,5 +18,19 @@
     <ClCompile Include="迭代器设计思维-STL关键所在.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="迭代器是一种smart_pointer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="mylist.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="mylist.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="mylist-iter.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

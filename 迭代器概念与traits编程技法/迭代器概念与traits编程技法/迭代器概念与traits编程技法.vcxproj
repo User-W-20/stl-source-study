@@ -123,7 +123,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="mylist.cpp" />
+    <ClCompile Include="迭代器是一种smart_pointer.cpp" />
     <ClCompile Include="迭代器设计思维-STL关键所在.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="mylist-iter.h" />
+    <ClInclude Include="mylist.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
