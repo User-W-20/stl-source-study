@@ -24,6 +24,9 @@
     <ClCompile Include="mylist.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="迭代器相应型别.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="mylist.h">

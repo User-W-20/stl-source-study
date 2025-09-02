@@ -39,29 +39,29 @@ public:
 	}
 };
 
-int main() {
-	List<int>mylist;
-
-	for (int i = 0; i < 5; ++i) {
-		mylist.insert_front(i);
-		mylist.insert_end(i + 2);
-	}
-	mylist.display();//4 3 2 1 0 2 3 4 5 6
-
-	ListIter<ListItem<int>>begin(mylist.front());
-	ListIter<ListItem<int>>end;//默认 0，null
-	ListIter<ListItem<int>>iter;//默认 0，null
-
-	iter =find(begin, end, 3);
-	if (iter == end)//found 3
-		std::cout << "not found" << std::endl;
-	else
-		std::cout << "found " << iter->value() << std::endl;
-
-	iter = find(begin, end, 7);
-	if (iter == end)//not found
-		std::cout << "not found" << std::endl;
-	else
-		std::cout << "found " << iter->value() << std::endl;
-
-}
+//int main() {
+//	List<int>mylist;
+//
+//	for (int i = 0; i < 5; ++i) {
+//		mylist.insert_front(i);
+//		mylist.insert_end(i + 2);
+//	}
+//	mylist.display();//4 3 2 1 0 2 3 4 5 6
+//
+//	ListIter<ListItem<int>>begin(mylist.front());
+//	ListIter<ListItem<int>>end;//默认 0，null
+//	ListIter<ListItem<int>>iter;//默认 0，null
+//
+//	iter =find(begin, end, 3);
+//	if (iter == end)//found 3
+//		std::cout << "not found" << std::endl;
+//	else
+//		std::cout << "found " << iter->value() << std::endl;
+//
+//	iter = find(begin, end, 7);
+//	if (iter == end)//not found
+//		std::cout << "not found" << std::endl;
+//	else
+//		std::cout << "found " << iter->value() << std::endl;
+//
+//}
