@@ -27,6 +27,9 @@
     <ClCompile Include="迭代器相应型别.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="Traits编程技法-STL源代码门钥.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="mylist.h">

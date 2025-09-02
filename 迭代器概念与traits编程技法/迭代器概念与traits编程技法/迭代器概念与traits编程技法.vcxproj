@@ -124,6 +124,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="mylist.cpp" />
+    <ClCompile Include="Traits编程技法-STL源代码门钥.cpp" />
     <ClCompile Include="迭代器是一种smart_pointer.cpp" />
     <ClCompile Include="迭代器相应型别.cpp" />
     <ClCompile Include="迭代器设计思维-STL关键所在.cpp" />
