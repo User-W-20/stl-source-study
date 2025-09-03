@@ -123,6 +123,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="iterator的保证.cpp" />
     <ClCompile Include="mylist.cpp" />
     <ClCompile Include="Traits编程技法-STL源代码门钥.cpp" />
     <ClCompile Include="迭代器是一种smart_pointer.cpp" />
