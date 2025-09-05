@@ -26,7 +26,7 @@
 //所有的STL算法都作用在由迭代器[first,last)所标示出来的区间上
 //“质变算法”，是指运算过程中会改变区间内（迭代器所指）的元素内容
 
-#include<iostream>
+/*#include<iostream>
 #include<vector>
 #include<algorithm>
 using namespace std;
@@ -38,22 +38,22 @@ vector<int>::const_iterator cite1 = iv.begin();
 
 vector<int>::const_iterator cite2 = iv.end();
 
-sort(cite1, cite2);  //此声明没有存储类或类型说明符
+sort(cite1, cite2);*/  //此声明没有存储类或类型说明符
 
 //“非质变算法”，是指运算过程中不会更改区间内（迭代器所指）的元素内容
 
-template<class T>
-struct plus2 {
-	void operator()(T& x)const
-	{
-		x += 2;
-	}
-};
-
-int ia[] = { 22,20,30,17,33,40,17,23,22,12,20 };
-vector<int> iv(ia, ia + sizeof(ia) / sizeof(int));
-
-for_each(iv.begin(), iv.end(), plus2<int>());
+//template<class T>
+//struct plus2 {
+//	void operator()(T& x)const
+//	{
+//		x += 2;
+//	}
+//};
+//
+//int ia[] = { 22,20,30,17,33,40,17,23,22,12,20 };
+//vector<int> iv(ia, ia + sizeof(ia) / sizeof(int));
+//
+//for_each(iv.begin(), iv.end(), plus2<int>());
 //元素会被改变
 
 //所有泛型算法的前两个参数都是一对迭代器（iterators），通常称为first和last，用以标示算法的操作区间

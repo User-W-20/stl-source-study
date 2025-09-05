@@ -18,15 +18,15 @@ int* find(int* arrayHead, int arraySize, int value) {
 //一个指向array元素的指针，不但可以合法地指向array内的任何位置，也可以指向array尾端以外的任何位置
 //当指针指向array尾端以外的位置时，它只能用来与其他array指针相比较，不能提领（dereference）其值
 
-const int arraySize = 7;
-int ia[arraySize] = { 0,1,2,3,4,5,6 };
-int* end = ia + arraySize;//最后元素的下一位置
-
-int* ip = find(ia, sizeof(ia) / sizeof(int), 4);
-if (ip == end) //两个array指针的比较
-cout << "4 not found" << endl;
-else
-cout << "4 found" << endl;
+//const int arraySize = 7;
+//int ia[arraySize] = { 0,1,2,3,4,5,6 };
+//int* end = ia + arraySize;//最后元素的下一位置
+//
+//int* ip = find(ia, sizeof(ia) / sizeof(int), 4);
+//if (ip == end) //两个array指针的比较
+//cout << "4 not found" << endl;
+//else
+//cout << "4 found" << endl;
 
 //find()的这种做法暴露了容器的太多的实现细节，也因此太过依附特定容器
 //为了让find()适用于所有类型的容器，其操作应该更抽象化
@@ -40,34 +40,34 @@ int* find(int* begin, int* end, int value) {
 
 //这个函数在“前闭后开”区间[begin,end)内查找value，并返回一个指针，指向它所找到的第一个符合条件的元素，如果没有找到，就返回end
 
-const int arraySize = 7;
-int ia[arraySize] = { 0,1,2,3,4,5,6 };
-int* end = ia + arraySize;
-
-int* ip = find(ia, end, 4);
-if(ip==end)
-cout<< "4 not found" << endl;
-else
-cout << "4 found" << endl;
+//const int arraySize = 7;
+//int ia[arraySize] = { 0,1,2,3,4,5,6 };
+//int* end = ia + arraySize;
+//
+//int* ip = find(ia, end, 4);
+//if(ip==end)
+//cout<< "4 not found" << endl;
+//else
+//cout << "4 found" << endl;
 
 //find()函数也可以很方便地用来查找array的子区间
-int* ip = find(ia + 2, ia + 5, 3);
-if (ip == end)
-cout << "3 not found" << endl;
-else
-cout << "3 found" << endl;
+//int* ip = find(ia + 2, ia + 5, 3);
+//if (ip == end)
+//cout << "3 not found" << endl;
+//else
+//cout << "3 found" << endl;
 
 //由于find()之内并无任何操作是针对特定的整数array而发的，所以可以将它改为一个template
-template<typename T>
-T* find(T* begin, T* end, const T& value) {
-	//以下用到了operator!=,operator*,operator++
-	while (begin!=end&&*begin!=value)
-	{
-		++begin;
-	}
-	//以下返回操作会引发copy行为
-	return begin;
-}
+//template<typename T>
+//T* find(T* begin, T* end, const T& value) {
+//	//以下用到了operator!=,operator*,operator++
+//	while (begin!=end&&*begin!=value)
+//	{
+//		++begin;
+//	}
+//	//以下返回操作会引发copy行为
+//	return begin;
+//}
 
 //数值的传递由pass-by-value改为pass-by-reference-to-const，因为如今所传递的value，其型别可为任意：于是对象一大，传递成本便会提升，pass-by-reference可完全避免这些成本
 
@@ -84,12 +84,12 @@ T* find(T* begin, T* end, const T& value) {
 
 //迭代器是一种行为类似指针的对象，是一种smart pointers
 
-template<class Iterator,class T>
-Iterator find(Iterator begin, Iterator end, const T& value) {
-	whie(begin != end && *begin != value)
-		++begin;
-
-	return begin;
-}
+//template<class Iterator,class T>
+//Iterator find(Iterator begin, Iterator end, const T& value) {
+//	whie(begin != end && *begin != value)
+//		++begin;
+//
+//	return begin;
+//}
 
 //完全泛化的find()函数
