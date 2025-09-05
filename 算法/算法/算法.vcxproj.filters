@@ -18,5 +18,8 @@
     <ClCompile Include="算法概观.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="算法的泛化过程.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
