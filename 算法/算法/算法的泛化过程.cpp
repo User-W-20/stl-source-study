@@ -4,13 +4,13 @@
 //关键在于，只要把操作对象的型别加以抽象化，把操作对象的标示法和区间目标的移动行为抽象化，整个算法也就在一个抽象层面上工作了。
 //整个过程称为算法的泛型化（generalized），简称泛化
 
-int* find(int* arrayHead, int arraySize, int value) {
-	for (int i = 0; i < arraySize; ++i) {
-		if (arrayHead[i] == value)
-			return &(arrayHead[i]);
-	}
-	return nullptr;
-}
+//int* find(int* arrayHead, int arraySize, int value) {
+//	for (int i = 0; i < arraySize; ++i) {
+//		if (arrayHead[i] == value)
+//			return &(arrayHead[i]);
+//	}
+//	return nullptr;
+//}
 
 //该函数在某个区间内查找value，返回的是一个指针，指向它所找到的第一个符合条件的元素，如果没有找到，就返回最后一个元素的下一位置（地址）
 //最后一个元素的下一位置称为end，end对比null的优势在于，end指针可以对其他种类的容器带来泛型效果
@@ -31,12 +31,12 @@ int* find(int* arrayHead, int arraySize, int value) {
 //find()的这种做法暴露了容器的太多的实现细节，也因此太过依附特定容器
 //为了让find()适用于所有类型的容器，其操作应该更抽象化
 
-int* find(int* begin, int* end, int value) {
-	while (begin != end && *begin != value)
-		++begin;
-
-	return begin;
-}
+//int* find(int* begin, int* end, int value) {
+//	while (begin != end && *begin != value)
+//		++begin;
+//
+//	return begin;
+//}
 
 //这个函数在“前闭后开”区间[begin,end)内查找value，并返回一个指针，指向它所找到的第一个符合条件的元素，如果没有找到，就返回end
 

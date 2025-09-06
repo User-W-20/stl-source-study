@@ -123,9 +123,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="基本算法.cpp" />
     <ClCompile Include="数值算法.cpp" />
     <ClCompile Include="算法概观.cpp" />
     <ClCompile Include="算法的泛化过程.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="string.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
