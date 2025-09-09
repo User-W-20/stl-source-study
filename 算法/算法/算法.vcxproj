@@ -123,6 +123,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="set相关算法.cpp" />
     <ClCompile Include="基本算法.cpp" />
     <ClCompile Include="数值算法.cpp" />
     <ClCompile Include="算法概观.cpp" />
